@@ -1,0 +1,11 @@
+Footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 36px;
+    text-align: center;
+    background: #fffeff;
+}
