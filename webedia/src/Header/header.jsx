@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './header.css';
 import WebediaLogo from '../WebediaLogo/webedialogo';
+import HeaderList from '../HeaderList/headerList';
 
 class Header extends Component {
 
@@ -15,6 +16,7 @@ class Header extends Component {
         return(
             <header>
                 <WebediaLogo />
+                <HeaderList />
             </header>
         );
     }
