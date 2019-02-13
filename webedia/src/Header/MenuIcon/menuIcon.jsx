@@ -4,8 +4,8 @@ import './menuIcon.css';
 import menuIcon from '../../assets/imgs/menuIcon.png';
 
 
-const MenuIcon  = ({ atrrbAlt, clickMenu }) => (
-    <div className="buttonMenu">
+const MenuIcon  = ({ atrrbAlt, clickMenu, searchOpen }) => (
+    <div className={"buttonMenu" + (searchOpen ? ' searchOpen': '')}>
         <img className="menuIcon" alt={atrrbAlt} src={menuIcon} onClick={clickMenu}>
         </img>
     </div>

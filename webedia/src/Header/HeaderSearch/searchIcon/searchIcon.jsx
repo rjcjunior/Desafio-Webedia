@@ -4,9 +4,9 @@ import './searchIcon.css';
 import searchIcon from '../../../assets/imgs/searchIcon.png';
 
 
-const SearchIcon  = ({ atrrbAlt }) => (
-    <div className="buttonSearch">
-        <img className="searchIcon" alt={atrrbAlt} src={searchIcon} >
+const SearchIcon  = ({ atrrbAlt, clickSearch, searchOpen }) => (
+    <div className={"buttonSearch" + (searchOpen ? ' searchOpen': '')}>
+        <img className="searchIcon" alt={atrrbAlt} src={searchIcon} onClick={clickSearch} >
         </img>
     </div>
 

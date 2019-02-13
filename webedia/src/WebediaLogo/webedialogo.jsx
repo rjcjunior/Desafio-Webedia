@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import './webedialogo.css';
 
 
-const WebediaLogo  = ({ atrrbAlt, atrrHref, atrrTarget, attrLogo }) => (
-    <a className="linkLogo" href={atrrHref} target={atrrTarget}>
+const WebediaLogo  = ({ atrrbAlt, atrrHref, atrrTarget, attrLogo, searchOpen }) => (
+    <a className={"linkLogo" + (searchOpen ? ' searchOpen': '')} href={atrrHref} target={atrrTarget}>
         <img className="logo" alt={atrrbAlt} src={attrLogo} >
         </img>
     </a>

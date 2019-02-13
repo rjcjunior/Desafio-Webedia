@@ -8,4 +8,7 @@
     .logo{
         width: 100%;
     }
+    .linkLogo.searchOpen{
+        display: none;
+    }
 }

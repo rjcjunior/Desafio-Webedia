@@ -11,21 +11,21 @@ As notícias deverão ser carregadas a partir de uma API.
 
 - A página inicial deverá carregar as notícias em destaque.
 
-### Header
+### Header -> OK
 
-- O link da imagem do header deve levar para a home, no qual deverá carregar as notícias em destaque.
+- O link da imagem do header deve levar para a home, no qual deverá carregar as notícias em destaque. -> OK
 
-### Menu
+### Menu -> OK
 
-- No mobile o menu deverá abrir por cima do conteúdo da página.
-- O menu mobile e desktop deverão possuir os mesmos itens.
+- No mobile o menu deverá abrir por cima do conteúdo da página. -> OK
+- O menu mobile e desktop deverão possuir os mesmos itens. -> OK
 
 ### Pesquisa
 
-- No desktop o campo de busca deverá começar aberto.
-- No desktop o campo de busca deverá estar focado, ou seja, pronto para o usuário digitar a pesquisa.
-- No mobile o campo de busca deverá começar escondido e deve aparecer apenas quando o usuário clicar no ícone de pesquisa. O logo do site deverá esconder quando isto ocorrer.
-- No mobile com o campo aberto, o usuário poderá fechar o campo de pesquisa e voltar com o logo ao clicar no ícone de fechar.
+- No desktop o campo de busca deverá começar aberto. -> OK
+- No desktop o campo de busca deverá estar focado, ou seja, pronto para o usuário digitar a pesquisa. -> OK
+- No mobile o campo de busca deverá começar escondido e deve aparecer apenas quando o usuário clicar no  ícone de pesquisa. O logo do site deverá esconder quando isto ocorrer.
+- No mobile com o campo aberto, o usuário poderá fechar o campo de pesquisa e voltar com o logo ao clicar no ícone de fechar. 
 - O usuário poderá fazer a pesquisa clicando no botão de busca ou apertando enter.
 
 ### Listagem de notícias
@@ -45,9 +45,11 @@ As notícias deverão ser carregadas a partir de uma API.
 - No caso da última página, mostrar a primeira página e as 4 últimas.
 - No caso de uma página entre a primeira e a última, mostrar sempre as adjacentes. Por exemplo, primeira página, quinta página, sexta página, sétima página e última página (sendo que a ativa é a sexta).
 
-### Footer
+### Footer -> OK
 
-- O logo da Webedia deverá enviar para o site em uma nova janela/aba: http://www.webedia.com.br/
+- O logo da Webedia deverá enviar para o site em uma nova janela/aba: http://www.webedia.com.br/ -> OK
+
+### Reponsividade
 
 ## Melhorias e sugestões
 
@@ -60,4 +62,4 @@ Segue uma lista de sugestões do que você pode fazer:
 - Fique atento na semântica do HTML.
 - Tente criar transições e efeitos de carregamento.
 - Use animações quando onde e como achar melhor.
-- Tente fazer com que seja possível abrir, por exemplo, a página de notícias do Brasil diretamente, sem passar pela página inicial. Assim como as outras páginas. O mesmo pode ser aplicado com a paginação.
+- Tente fazer com que seja possível abrir, por exemplo, a página de notícias do Brasil diretamente, sem passar pela página inicial. Assim como as outras páginas. -> OK |  O mesmo pode ser aplicado com a paginação. 

@@ -3,24 +3,33 @@ import './headerSearch.css';
 
 class HeaderSearch extends Component {
 
-    constructor(){ //Construtor
-        super();
+    constructor(props){ //Construtor
+        super(props);
         this.state = {
             search: '',
-            openSearch: false 
         };
         this.handleSearchChange = this.handleSearchChange.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
+
     }
 
     handleSearchChange(e) {
-        this.setState({ search: e.target.search });
+        this.setState({ search: e.target.value });
     }
+
+    handleFormSubmit(e) {
+        e.preventDefault();
+        this.props.OnParametersChange(this.state.search);
+    }
+
     render(){
         return(
-            <form className={"formSearch " +  (this.props.openSearch ? 'searchOpened': '')} >
+            <form className={"formSearch " +  (this.props.openSearch ? 'searchOpened': '')} 
+             onSubmit={this.handleFormSubmit} >
+
                 <input
                 className="headerSearch"
-                placeholder="Pesquisar"
+                placeholder="Pesquisa"
                 type="search"
                 value={this.state.search}           
                 onChange={this.handleSearchChange}

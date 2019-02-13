@@ -19,4 +19,7 @@
       max-width: 29%;
       margin-right: 26px;
     }
+    .buttonSearch.searchOpen{
+      display: none;
+    }
 }

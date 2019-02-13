@@ -19,12 +19,18 @@ class Header extends Component {
             searchBar: false 
         };
         this.clickMenuOpen = this.clickMenuOpen.bind(this);
+        this.clickSearchOpen = this.clickSearchOpen.bind(this);
         this.clickMenuClose = this.clickMenuClose.bind(this);
-
+        this.OnParametersChange = this.OnParametersChange.bind(this);        
     }
     clickMenuOpen(e) {
         e.preventDefault();
-        this.state.menu ? this.setState({ mobileOpen: false, overlay:false }) : this.setState({ mobileOpen: true, overlay:true });
+        this.state.mobileOpen ? this.setState({ mobileOpen: false, overlay:false }) : this.setState({ mobileOpen: true, overlay:true });
+        this.render();
+    }
+    clickSearchOpen(e) {
+        e.preventDefault();
+        this.state.searchBar ? this.setState({ searchBar: false}) : this.setState({ searchBar: true });
         this.render();
     }
     clickMenuClose(e) {
@@ -32,25 +38,37 @@ class Header extends Component {
         this.state.mobileOpen ? this.setState({ mobileOpen: false, overlay:false }) : this.setState({ searchBar: false });
         this.render();
     }
+    OnParametersChange(textSearch) {
+        console.log("Chamando a API e filtrando texto");
+    }
     render(){
         return(
             <header>
                 <MenuIcon
                     clickMenu = {this.clickMenuOpen}
+                    searchOpen = {this.state.searchBar}
                 />
                 <WebediaLogo
                     attrLogo = {logoWebedia}
+                    searchOpen = {this.state.searchBar}
                 />
                 <CloseIcon
                     closeMenu = {this.state.mobileOpen}
                     closeSearch = {this.state.searchBar}
                     close = {this.clickMenuClose}
                 />
-                <HeaderSearch/>
+                <HeaderSearch
+                    openSearch = {this.state.searchBar}
+                    textSearch = {this.state.textSearch}
+                    OnParametersChange = {this.OnParametersChange}
+                />
                 <HeaderList 
                     mobileOpen = {this.state.mobileOpen}
                 />
-                <SearchIcon/>
+                <SearchIcon
+                    clickSearch = {this.clickSearchOpen}
+                    searchOpen = {this.state.searchBar}
+                />
                 <Overlay 
                     overlay = {this.state.overlay}
                 />
