@@ -8,21 +8,29 @@ class HeaderSearch extends Component {
         this.state = {
             search: '' 
         };
+        this.handleSearchChange = this.handleSearchChange.bind(this);
     }
 
     handleSearchChange(e) {
-        this.setState({ value: e.target.search });
+        this.setState({ search: e.target.search });
     }
     render(){
         return(
         <form className="formSearch">
+
             <input
             className="headerSearch"
             placeholder="Pesquisar"
             type="search"
             value={this.state.search}           
             onChange={this.handleSearchChange}
-            autofocus/>
+            autoFocus/>
+
+            <input 
+            className="submitSearch"
+            type="submit" 
+            value=""
+             />
         </form>
         );
     }

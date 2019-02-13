@@ -23,7 +23,7 @@ class HeaderList extends Component {
                 <ul>
                     {itensList.map(({ country, text }) => (
                         
-                        <li id={country!=='' ? "item-"+country : 'item-des'} className="headerItem">
+                        <li  key={country} id={country!=='' ? "item-"+country : 'item-des'} className="headerItem">
                             <a href={country!=='' ? "?country=" + country : '/'}>{text}</a>
                         </li>
                      ))}

@@ -1,0 +1,33 @@
+.formSearch{
+    position: absolute;
+    width: 50%;
+    top: 14px;
+    right: 0;
+}
+.headerSearch{
+    border-radius: 25px;
+    padding: 9px;
+    width: 244px;
+    border: transparent;
+    box-shadow: 1px 4px 4px 0px rgba(0,0,0,0.45);
+    margin-left: 7%;
+    height: 45px;
+}
+.submitSearch{
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAWCAYAAAAvg9c4AAABnUlEQVQ4ja2UyyuFQRjGfwfJZSe3kJVCkYhIKVmdrVvWrOQv8A8oSxtFbKUkC9dSLGShdFifkCPJ2sL9uDR51JyZOZ/S+dVX33zv8z7fO/PODAHygGFgFbgF0sAjcAbMAE1+SjSdSv6KeD6ABaAom1PMeh8EVoBijY+BXeBG3zo0gyrFT4A48OC5ii7gVdWZKfd7ih9KgFngU9o9IN9TqdqERNdAjafwmbKWZ8KLAkOWIFuFIdaVk1JzM1hT8CiQGEW7VUy3rcuzPmxHGIQ4VxMNPa7p7xomA4l/caF4rWua1nvpHwYhCi2fDNOU3psDSVGYrdSieMrVLWqxk6EuRhC3GtXiyrqt4GR2jwwKrL2d8KJiQ4InoM+LZmJms2QVEvcUokLbw4hegGkdSZc24MAy3PcUDo3ApZVgrrtNYA5Y1r50by9zB4x7Tg5lwDzwHjD4fe503k81NltyzLaJebY/1AOjmm6l7tAr4BDY0U/LNW4F3oARYMtz+gfVOlWm4mdgIBemhjqryaYPvbkybtBaG+P7XJkazKlKAbvfMsd04nS674UAAAAASUVORK5CYII=) no-repeat;
+    height: 27px;    
+    position: absolute;    
+    width: 27px;    
+    border: none;    
+    cursor: pointer;    
+    margin-left: -41px;
+    top: 12px;
+}
+.submitSearch:focus{
+    outline: none;
+}
+.submitSearch::-moz-focus-inner {
+    border: 0;
+  }
+  
+  

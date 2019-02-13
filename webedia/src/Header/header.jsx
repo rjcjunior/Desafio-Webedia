@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './header.css';
 import WebediaLogo from '../WebediaLogo/webedialogo';
-import HeaderList from '../HeaderList/headerList';
-import HeaderSearch from '../HeaderSearch/headerSearch';
+import HeaderList from './HeaderList/headerList';
+import HeaderSearch from './HeaderSearch/headerSearch';
 
 
 class Header extends Component {
