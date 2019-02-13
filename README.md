@@ -3,7 +3,7 @@ Seu desafio será desenvolver um simples site responsivo de notícias internacio
 
 As notícias deverão ser carregadas a partir de uma API.
 
-### API
+### API -> OK
 
 - Você deverá pegar as notícias da News API(https://newsapi.org/). A News API é uma API gratuita para projetos open source no qual fornece notícias de diversas fontes ao redor do mundo. 
 
@@ -20,13 +20,13 @@ As notícias deverão ser carregadas a partir de uma API.
 - No mobile o menu deverá abrir por cima do conteúdo da página. -> OK
 - O menu mobile e desktop deverão possuir os mesmos itens. -> OK
 
-### Pesquisa
+### Pesquisa -> OK
 
 - No desktop o campo de busca deverá começar aberto. -> OK
 - No desktop o campo de busca deverá estar focado, ou seja, pronto para o usuário digitar a pesquisa. -> OK
-- No mobile o campo de busca deverá começar escondido e deve aparecer apenas quando o usuário clicar no  ícone de pesquisa. O logo do site deverá esconder quando isto ocorrer.
-- No mobile com o campo aberto, o usuário poderá fechar o campo de pesquisa e voltar com o logo ao clicar no ícone de fechar. 
-- O usuário poderá fazer a pesquisa clicando no botão de busca ou apertando enter.
+- No mobile o campo de busca deverá começar escondido e deve aparecer apenas quando o usuário clicar no  ícone de pesquisa. O logo do site deverá esconder quando isto ocorrer. -> OK
+- No mobile com o campo aberto, o usuário poderá fechar o campo de pesquisa e voltar com o logo ao clicar no ícone de fechar. -> OK
+- O usuário poderá fazer a pesquisa clicando no botão de busca ou apertando enter. -> OK
 
 ### Listagem de notícias
 
