@@ -39,7 +39,10 @@ class Header extends Component {
         this.render();
     }
     OnParametersChange(textSearch) {
-        console.log("Chamando a API e filtrando texto");
+        let params = new URLSearchParams(document.location.search.substring(1));
+        let country = params.get("country");
+        let page = params.get("page");
+        this.props.request(country, textSearch, page);
     }
     render(){
         return(

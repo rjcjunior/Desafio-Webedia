@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import './apiRequest.css';
+import Header from '../Header/header';
+import Footer from '../Footer/footer';
+
 
 class ApiRequest extends Component {
     
     constructor(props) {
         super(props);
+        let params = new URLSearchParams(document.location.search.substring(1));
         this.state = {
           loading: true,
+          country: params.get("country"),
+          page: params.get("page"),
+          textSearch: params.get("search"),
           news: []
         };
         this.request = this.request.bind(this);
@@ -16,15 +23,24 @@ class ApiRequest extends Component {
         let url = "https://newsapi.org/v2/";
         let apiKey = "&apiKey=df80cb7555a64838b111e56a9e3afb27";
         let pageSize = "&pageSize=7"
-        if (country != null) {
-            url += "top-headlines?country=" + country;
-        }
-        else if(textSearch==null){ 
+
+        if (country === null && textSearch=== null){
             url += "top-headlines?country=br";
         }
         else{
-            url += "everything?q=" + textSearch;
+            if(textSearch!=null){ 
+                if (country != null) {
+                    url += "top-headlines?q=" + textSearch + "&country=" + country;
+                }    
+                else{
+                    url += "everything?q=" + textSearch;
+                }
+            }
+            else if (country != null) {
+                url += "top-headlines?country=" + country;
+            }
         }
+        console.log(url);
         url += pageSize; 
         if (page!=null){
             url += "&page=" + page;
@@ -36,16 +52,21 @@ class ApiRequest extends Component {
             loading: false,
             news: json.articles
         });
+        console.log(json);
     }
 
     componentDidMount() { //Inicializar request
-        this.request(this.props.country, this.props.textSearch, this.props.page);
+        this.request(this.state.country, this.state.textSearch, this.state.page);
     }
     
     render() {
         return (
-          <div>
-           </div>
+            <div className="App">
+                <Header
+                    request = {this.request}
+                />
+                <Footer />
+            </div>
         );
     }
 
