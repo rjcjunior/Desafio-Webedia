@@ -33,12 +33,17 @@
 /* Mobile */
 @media (max-width: 767px){
     .headerList {
+        display: none;
         position: absolute;
         top: 0;
         z-index: 2;
         height: 100%;
         width: 80%;
         overflow: hidden;
+        overflow-y: auto;
+    }
+    .headerList.responsiveMenu{
+        display: block;
     }
     .headerList ul {
         padding: 0;

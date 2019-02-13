@@ -29,5 +29,13 @@
 .submitSearch::-moz-focus-inner {
     border: 0;
   }
-  
-  
+
+/* Mobile */
+@media (max-width: 767px){
+    .formSearch{
+        display: none;
+    }
+    .formSearch.searchOpened{
+        display: block;
+    }
+}

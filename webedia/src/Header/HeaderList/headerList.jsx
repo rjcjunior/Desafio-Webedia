@@ -11,12 +11,6 @@ const  itensList = [
 
 class HeaderList extends Component {
 
-    constructor(){ //Construtor
-        super();
-        this.state = {
-            mobileOpen: false, 
-        };
-    }
     render(){
         return(
             <div className={"headerList " +  (this.props.mobileOpen ? 'responsiveMenu': '')} >

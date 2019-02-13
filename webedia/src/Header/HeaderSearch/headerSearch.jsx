@@ -6,7 +6,8 @@ class HeaderSearch extends Component {
     constructor(){ //Construtor
         super();
         this.state = {
-            search: '' 
+            search: '',
+            openSearch: false 
         };
         this.handleSearchChange = this.handleSearchChange.bind(this);
     }
@@ -16,22 +17,21 @@ class HeaderSearch extends Component {
     }
     render(){
         return(
-        <form className="formSearch">
+            <form className={"formSearch " +  (this.props.openSearch ? 'searchOpened': '')} >
+                <input
+                className="headerSearch"
+                placeholder="Pesquisar"
+                type="search"
+                value={this.state.search}           
+                onChange={this.handleSearchChange}
+                autoFocus/>
 
-            <input
-            className="headerSearch"
-            placeholder="Pesquisar"
-            type="search"
-            value={this.state.search}           
-            onChange={this.handleSearchChange}
-            autoFocus/>
-
-            <input 
-            className="submitSearch"
-            type="submit" 
-            value=""
-             />
-        </form>
+                <input 
+                className="submitSearch"
+                type="submit" 
+                value=""
+                />
+            </form>
         );
     }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './footer.css';
 import WebediaLogo from '../WebediaLogo/webedialogo';
+import logoWebedia from '../assets/imgs/logoWebedia.png';
 
 class Footer extends Component {
 
@@ -10,6 +11,7 @@ class Footer extends Component {
                 <WebediaLogo 
                     atrrHref = "http://www.webedia.com.br/"
                     atrrTarget = "_blank"
+                    attrLogo = {logoWebedia}
                 />
             </footer>
         );

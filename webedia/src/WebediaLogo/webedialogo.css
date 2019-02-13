@@ -1,0 +1,11 @@
+
+/* Mobile */
+@media (max-width: 767px){
+    .linkLogo{
+        width: 50%;
+        display: inline-block;
+    }
+    .logo{
+        width: 100%;
+    }
+}

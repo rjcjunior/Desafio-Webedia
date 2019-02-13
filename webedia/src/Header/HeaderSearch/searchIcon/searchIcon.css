@@ -1,0 +1,22 @@
+.buttonSearch{
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 767px){
+  .buttonSearch{
+    display: block;
+    border: none; 
+    width: 25%;   
+    background: transparent;   
+    float: right;    
+    text-align: right;    
+    margin-top: 8px;  
+  }
+  .searchIcon{
+      padding: 1px; 
+      cursor: pointer;
+      max-width: 29%;
+      margin-right: 26px;
+    }
+}
