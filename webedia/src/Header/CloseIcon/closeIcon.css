@@ -1,0 +1,42 @@
+.closeButton{
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 767px){
+  .closeButton{
+    position: absolute;
+    top: 10px;
+    right: -3%;
+    width: 25%;    
+    background: transparent;    
+    text-align: center;
+    z-index: 2;    
+  }
+  .closeMenu , .closeSearch{
+    display: block;
+  }
+  .closeIcon{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    border: transparent;    
+    box-shadow: 3px 2px 12px -4px rgba(0,0,0,0.45);
+    cursor: pointer;
+  }
+  .closeIcon:focus{
+    outline: none;
+  }
+  .closeIcon::-moz-focus-inner {
+      border: 0;
+  }
+  .closeMenu .closeIcon{
+    background-color: #f1eff1;
+  }
+  .closeSearch .closeIcon{
+    background-color: #fff;
+  }
+}

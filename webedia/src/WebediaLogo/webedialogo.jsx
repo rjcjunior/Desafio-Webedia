@@ -15,7 +15,6 @@ WebediaLogo.propTypes = {
     atrrbAlt: PropTypes.string.isRequired,
     atrrHref: PropTypes.string.isRequired,
     atrrTarget: PropTypes.string.isRequired,
-    atrrLogo: PropTypes.string.isRequired
 };
 
 WebediaLogo.defaultProps = {
