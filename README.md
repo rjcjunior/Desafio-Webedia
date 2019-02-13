@@ -5,11 +5,11 @@ As notícias deverão ser carregadas a partir de uma API.
 
 ### API -> OK
 
-- Você deverá pegar as notícias da News API(https://newsapi.org/). A News API é uma API gratuita para projetos open source no qual fornece notícias de diversas fontes ao redor do mundo. 
+- Você deverá pegar as notícias da News API(https://newsapi.org/). A News API é uma API gratuita para projetos open source no qual fornece notícias de diversas fontes ao redor do mundo. -> OK
 
-### Página incial
+### Página incial -> OK
 
-- A página inicial deverá carregar as notícias em destaque.
+- A página inicial deverá carregar as notícias em destaque. -> OK
 
 ### Header -> OK
 

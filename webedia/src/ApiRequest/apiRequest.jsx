@@ -3,8 +3,8 @@ import './apiRequest.css';
 
 class ApiRequest extends Component {
     
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
           loading: true,
           news: []
@@ -12,7 +12,7 @@ class ApiRequest extends Component {
         this.request = this.request.bind(this);
     }
 
-    async request(textSearch,country, page){
+    async request(country,textSearch, page){
         let url = "https://newsapi.org/v2/";
         let apiKey = "&apiKey=df80cb7555a64838b111e56a9e3afb27";
         let pageSize = "&pageSize=7"
@@ -39,7 +39,7 @@ class ApiRequest extends Component {
     }
 
     componentDidMount() { //Inicializar request
-        this.request();
+        this.request(this.props.country, this.props.textSearch, this.props.page);
     }
     
     render() {
