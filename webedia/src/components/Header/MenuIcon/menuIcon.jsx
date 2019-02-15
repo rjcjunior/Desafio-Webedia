@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './menuIcon.css';
-import menuIcon from '../../assets/imgs/menuIcon.png';
+import menuIcon from '../../../assets/imgs/menuIcon.png';
 
 
 const MenuIcon  = ({ atrrbAlt, clickMenu, searchOpen }) => (

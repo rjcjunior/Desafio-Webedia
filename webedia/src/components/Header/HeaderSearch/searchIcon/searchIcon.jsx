@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './searchIcon.css';
-import searchIcon from '../../../assets/imgs/searchIcon.png';
+import searchIcon from '../../../../assets/imgs/searchIcon.png';
 
 
 const SearchIcon  = ({ atrrbAlt, clickSearch, searchOpen }) => (

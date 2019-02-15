@@ -1,0 +1,39 @@
+.newsSection {
+    text-align: center;
+    display: inline-block;
+}
+.newsCard {
+    width: 467px;
+    height: 467px;
+    background: #fffeff;
+    display: inline-block;
+    box-shadow: 0 6px 4px -4px rgba(0,0,0,0.45);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 15px;
+}
+.newsBody {
+    padding: 0 38px;
+}
+.newsImage {
+    height: 350px;
+    max-width: 100%;
+}
+.newsDate {
+    width: 100%;
+    display: inline-block;
+    color: #bfbfbf;
+}
+.newsTitle {
+    margin: 0;
+    color: #7ca3d2;
+    text-transform: uppercase;
+}    
+.newsText {
+    color: #a9a9a9;
+    height: 50px;
+}
+.newsAuthor{
+    font-size: 12px;
+}

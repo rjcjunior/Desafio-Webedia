@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './apiRequest.css';
 import Header from '../Header/header';
 import Footer from '../Footer/footer';
-
+import Card from '../Card/card';
 
 class ApiRequest extends Component {
     
@@ -52,7 +52,6 @@ class ApiRequest extends Component {
             loading: false,
             news: json.articles
         });
-        console.log(json);
     }
 
     componentDidMount() { //Inicializar request
@@ -64,6 +63,9 @@ class ApiRequest extends Component {
             <div className="App">
                 <Header
                     request = {this.request}
+                />
+                <Card 
+                    news = {this.state.news}
                 />
                 <Footer />
             </div>

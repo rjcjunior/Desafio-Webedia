@@ -20,7 +20,7 @@ class HeaderList extends Component {
                         <li  key={country} id={country!=='' ? "item-"+country : 'item-des'} className="headerItem">
                             <a href={country!=='' ? "?country=" + country : '/'}>{text}</a>
                         </li>
-                     ))}
+                    ))}
                 </ul>
             </div>
         );

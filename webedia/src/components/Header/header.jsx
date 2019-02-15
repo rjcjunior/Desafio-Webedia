@@ -6,7 +6,7 @@ import HeaderSearch from './HeaderSearch/headerSearch';
 import SearchIcon from './HeaderSearch/searchIcon/searchIcon'
 import MenuIcon from './MenuIcon/menuIcon'
 import CloseIcon from './CloseIcon/closeIcon'
-import logoWebedia from '../assets/imgs/logoWebedia.png';
+import logoWebedia from '../../assets/imgs/logoWebedia.png';
 import Overlay from '../Overlay/overlay'
 
 class Header extends Component {

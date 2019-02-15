@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './footer.css';
 import WebediaLogo from '../WebediaLogo/webedialogo';
-import logoWebedia from '../assets/imgs/logoWebedia.png';
+import logoWebedia from '../../assets/imgs/logoWebedia.png';
 
 class Footer extends Component {
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ApiRequest from './ApiRequest/apiRequest'
+import ApiRequest from './components/ApiRequest/apiRequest'
 
 class App extends Component {
     render(){
