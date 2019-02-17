@@ -4,3 +4,10 @@ Header{
     width: 100%;
     display: inline-block;
 }
+
+/* Mobile */
+@media (max-width: 767px){
+    Header{
+        min-height: 47px;
+    }
+}

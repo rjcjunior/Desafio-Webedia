@@ -28,13 +28,13 @@ As notícias deverão ser carregadas a partir de uma API.
 - No mobile com o campo aberto, o usuário poderá fechar o campo de pesquisa e voltar com o logo ao clicar no ícone de fechar. -> OK
 - O usuário poderá fazer a pesquisa clicando no botão de busca ou apertando enter. -> OK
 
-### Listagem de notícias
+### Listagem de notícias -> OK
 
-- No desktop a listagem de notícias deve possuir exatamente as mesmas posições como no layout.
-- Caso a imagem da notícia que venha da API seja menor ou maior que o container, faça o mesmo respeitar o container. Caso seja maior, centralize a imagem dentro do container. Caso ele seja menor, faça com que o mesmo esteja centralizado horizontalmente e verticalmente, com background cinza (como em exemplo no layout).
-- O card inteiro do item de notícia deverá ser clicável para o link da matéria.
-- As informações que deverão conter no card são: data de publicação, título, descrição e autor. Você deve omitir a informação caso ela não seja enviada pela API.
-- Cada página deverá ter no máximo 7 notícias.
+- No desktop a listagem de notícias deve possuir exatamente as mesmas posições como no layout. -> OK
+- Caso a imagem da notícia que venha da API seja menor ou maior que o container, faça o mesmo respeitar o container. Caso seja maior, centralize a imagem dentro do container. Caso ele seja menor, faça com que o mesmo esteja centralizado horizontalmente e verticalmente, com background cinza (como em exemplo no layout). -> OK
+- O card inteiro do item de notícia deverá ser clicável para o link da matéria. -> OK
+- As informações que deverão conter no card são: data de publicação, título, descrição e autor. Você deve omitir a informação caso ela não seja enviada pela API. -> OK
+- Cada página deverá ter no máximo 7 notícias. -> OK
 
 ### Paginação
 
