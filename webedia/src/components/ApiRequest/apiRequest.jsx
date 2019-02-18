@@ -3,6 +3,7 @@ import './apiRequest.css';
 import Header from '../Header/header';
 import Footer from '../Footer/footer';
 import Card from '../Card/card';
+import ApiError from './ApiError/apiError';
 
 class ApiRequest extends Component {
     
@@ -40,7 +41,6 @@ class ApiRequest extends Component {
                 url += "top-headlines?country=" + country;
             }
         }
-        console.log(url);
         url += pageSize; 
         if (page!=null){
             url += "&page=" + page;
@@ -52,6 +52,7 @@ class ApiRequest extends Component {
             loading: false,
             news: json.articles
         });
+        console.log(this.state.news != null || this.state.news.length === 0);
     }
 
     componentDidMount() { //Inicializar request
@@ -64,9 +65,13 @@ class ApiRequest extends Component {
                 <Header
                     request = {this.request}
                 />
-                <Card 
-                    news = {this.state.news}
-                />
+                {this.state.news === null || this.state.news.length === 0 ?
+                    <ApiError/>
+                :
+                    <Card 
+                        news = {this.state.news}
+                    />
+                }
                 <Footer />
             </div>
         );

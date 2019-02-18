@@ -14,11 +14,52 @@
     margin: 15px 7px 15px 7px;
 }
 .headerItem a {
-    color: #7ca3d2;
+    color: #7ca3d2a4;
     text-decoration: none;
-
+    position: relative;
+    display: inline-block;    
+    outline: none;    
+    text-transform: uppercase;    
+    font-weight: 400;    
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);    
 }
 
+.headerItem a::before {
+    color: #7ca3d2;
+    content: attr(data-hover);
+    position: absolute;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.headerItem a:hover::before{
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0;
+}
+.headerItem a::after{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(0,0,0,0.1);
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+}
+.headerItem a:hover::after{
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
 /* Desktop */
 @media (min-width: 768px){
     .headerList ul{

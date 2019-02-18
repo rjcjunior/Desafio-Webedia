@@ -1,0 +1,81 @@
+.errorDiv {
+    width: 100%;
+    text-align: right;
+    display: flex;
+    padding: 43px 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+.errorImgDiv, .errorTextsDiv {
+    display: inline-block;
+    width: 50%;
+}
+.errorTextsDiv {
+    text-align: left;
+    position: relative;
+    margin-left: 70px;
+}
+.errorImg {
+    width: 400px;
+}
+.errorTitle {
+    text-align: left;
+    font-size: 4em;
+    margin: 0;
+}
+.errorButton {
+    position: absolute;
+    bottom: 0;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .165em;
+    text-align: center;
+    background-color: #607e97;
+    padding: 1.2em 4em;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in;
+    box-shadow: 12px 15px 20px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+.errorButton:hover {
+    background-color: #384a59;
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile */
+@media (max-width: 767px){
+    .errorDiv {
+        display: block;
+        padding: 38px 0;
+        height: 100%;
+    }
+    .errorImgDiv {
+        width: auto;
+        text-align: center;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+    .errorImg {
+        width: 200px;
+    }
+    .errorTextsDiv {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .errorTitle {
+        text-align: center;
+        font-size: 2em;
+    }
+    .errorButton {
+        position: relative;
+    }
+    .errorText {
+        padding: 48px;
+    }
+}
