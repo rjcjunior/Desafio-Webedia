@@ -67,6 +67,8 @@ class ApiRequest extends Component {
                 textSearch: textSearch,
                 totalNews: json.totalResults
         });
+        var newURL = window.location.href.split("?")[0]; //Limpar URL depois de pegar os parametros para não haver confusão na requisições posteriores
+        window.history.pushState('object', document.title, newURL);
     }
 
     componentDidMount() { //Inicializar request
