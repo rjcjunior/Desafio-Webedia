@@ -5,11 +5,11 @@ class Pagination extends Component {
 
     constructor(props){ 
         super(props);
-        let url = window.location.origin + "/"
-        if (this.props.country != null){
-            url += "?country=" + this.props.country;
+        let url = window.location.origin + "/?"
+        if (this.props.country !== null && this.props.country !== undefined){
+            url += "country=" + this.props.country;
         }
-        if (this.props.search != null){
+        if (this.props.search !== null && this.props.search !== undefined){
             url += "&search=" + this.props.search;
         }
         this.state = {
@@ -20,62 +20,66 @@ class Pagination extends Component {
     }
 
     getPagination(){ //Algoritmo para a paginação
-        console.log(1); //Primeira pagina
+        let pages = [];
+        pages.push(1); //Primeira pagina
         let numberOfPages = parseInt(this.state.numberOfPages);
-        let pageActual = parseInt(this.props.page);
-        if(numberOfPages != 1){
+        let pageActual = this.props.page;
+        if (this.props.page === null || this.props.page === undefined){
+            pageActual = 1;
+        }
+        else{
+            pageActual = parseInt(this.props.page);
+        }
+        if(numberOfPages !== 1){
             if (numberOfPages <= 5){ //Somente 5 paginas 
                 for (let index = 2; index <= numberOfPages; index++) {
-                    console.log(index);
+                    pages.push(index);
                 }
             }
             else{ //Se tiver mais de 5 paginas
-                if(pageActual != numberOfPages){ //Se a pagina atual não for a ultima
-                    if(pageActual == (numberOfPages - 1)){ //Se a atual for a penultima
+                if(pageActual !== numberOfPages){ //Se a pagina atual não for a ultima
+                    if(pageActual === (numberOfPages - 1)){ //Se a atual for a penultima
                         for (let index = 0; index <= 2; index++) {
-                            console.log(pageActual -( 2 - index));
+                            pages.push(pageActual -( 2 - index));
                         }                                
                     }
                     else{ //Se a atual nao for a penultima
-                        if(pageActual == 1){  //Se a atual for a primeira
+                        if(pageActual === 1){  //Se a atual for a primeira
                             for (let index = 1; index <= 3; index++) {
-                                console.log(1 + index);
+                                pages.push(1 + index);
                             }                                    
                         }
                         else{ //Se a atual não for a primeira
-                            if(pageActual == (2)){ //Se a atual for a segunda
-                                console.log(pageActual);
-                                console.log(pageActual + 1);
-                                console.log(pageActual + 2);
+                            if(pageActual === (2)){ //Se a atual for a segunda
+                                pages.push(pageActual);
+                                pages.push(pageActual + 1);
+                                pages.push(pageActual + 2);
                             }
                             else{ //Se não for a segunda
-                                console.log(pageActual - 1);
-                                console.log(pageActual);
-                                console.log(pageActual + 1);
+                                pages.push(pageActual - 1);
+                                pages.push(pageActual);
+                                pages.push(pageActual + 1);
                             }
                         }
                     }
-                    console.log(numberOfPages) //Imprimir ultima pagina
+                    pages.push(numberOfPages) //Imprimir ultima pagina
                 }
                 else{ //Se a atual for a ultima pagina
                     for (let index = 0; index <= 3; index++) {
-                        console.log(pageActual - ( 3 - index));
+                        pages.push(pageActual - ( 3 - index));
                     }
                 }
             }
-        }        
+        } 
+        return pages;       
     }
 
     render(){
         return(
             <div className="paginationDiv">        
-                <a className={"paginationItem " +  (this.props.page === 1 || this.props.page === null ? 'active': '')}  href = {this.state.url + "&page=" + 1 } >1</a>              
-
-                {this.state.numberOfPages !== 1 ?
-                    <a className={"paginationItem " +  (this.props.page === this.state.numberOfPages ? 'active': '')}  href = {this.state.url + "&page=" + this.state.numberOfPages } >{this.state.numberOfPages}</a>
-                    :
-                    ''              
-                }
+            {this.getPagination().map((item,i) => (
+                <a key={"pItem" + item} className={"paginationItem " +  (parseInt(this.props.page) === item || (this.props.page === null && (i+1) === 1) ? 'active': '')}  href = {this.state.url + "&page=" + item } >{item}</a>              
+            ))}
             </div>
         );
     }

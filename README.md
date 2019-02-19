@@ -36,14 +36,14 @@ As notícias deverão ser carregadas a partir de uma API.
 - As informações que deverão conter no card são: data de publicação, título, descrição e autor. Você deve omitir a informação caso ela não seja enviada pela API. -> OK
 - Cada página deverá ter no máximo 7 notícias. -> OK
 
-### Paginação
+### Paginação -> OK
 
-- Deverá conter sempre 5 links de páginas.
+- Deverá conter sempre 5 links de páginas. -> OK
 - Deverá mostrar sempre qual é a página ativa atual. -> OK
 - Deverá conter sempre link da primeira e última página. -> OK
-- No caso da primeira página, mostrar as 4 primeiras páginas e a última página.
-- No caso da última página, mostrar a primeira página e as 4 últimas.
-- No caso de uma página entre a primeira e a última, mostrar sempre as adjacentes. Por exemplo, primeira página, quinta página, sexta página, sétima página e última página (sendo que a ativa é a sexta).
+- No caso da primeira página, mostrar as 4 primeiras páginas e a última página. -> OK
+- No caso da última página, mostrar a primeira página e as 4 últimas. -> OK
+- No caso de uma página entre a primeira e a última, mostrar sempre as adjacentes. Por exemplo, primeira página, quinta página, sexta página, sétima página e última página (sendo que a ativa é a sexta). -> OK
 
 ### Footer -> OK
 
