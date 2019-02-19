@@ -41,8 +41,7 @@ class Header extends Component {
     OnParametersChange(textSearch) {
         let params = new URLSearchParams(document.location.search.substring(1));
         let country = params.get("country");
-        let page = params.get("page");
-        this.props.request(country, textSearch, page);
+        this.props.request(country, textSearch, null, 7);
     }
     render(){
         return(

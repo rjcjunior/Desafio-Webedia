@@ -39,8 +39,8 @@ As notícias deverão ser carregadas a partir de uma API.
 ### Paginação
 
 - Deverá conter sempre 5 links de páginas.
-- Deverá mostrar sempre qual é a página ativa atual.
-- Deverá conter sempre link da primeira e última página.
+- Deverá mostrar sempre qual é a página ativa atual. -> OK
+- Deverá conter sempre link da primeira e última página. -> OK
 - No caso da primeira página, mostrar as 4 primeiras páginas e a última página.
 - No caso da última página, mostrar a primeira página e as 4 últimas.
 - No caso de uma página entre a primeira e a última, mostrar sempre as adjacentes. Por exemplo, primeira página, quinta página, sexta página, sétima página e última página (sendo que a ativa é a sexta).
@@ -57,9 +57,11 @@ As notícias deverão ser carregadas a partir de uma API.
 
 Segue uma lista de sugestões do que você pode fazer:
 
-- Trabalhe em efeitos de hover nos itens e links.
-- Caso não exista resultado na página de busca, mostre uma mensagem de feedback. Deixamos o visual por sua conta.
-- Fique atento na semântica do HTML.
-- Tente criar transições e efeitos de carregamento.
-- Use animações quando onde e como achar melhor.
-- Tente fazer com que seja possível abrir, por exemplo, a página de notícias do Brasil diretamente, sem passar pela página inicial. Assim como as outras páginas. -> OK |  O mesmo pode ser aplicado com a paginação. 
+- Trabalhe em efeitos de hover nos itens e links. -> OK
+- Caso não exista resultado na página de busca, mostre uma mensagem de feedback. Deixamos o visual por sua conta. -> OK
+- Fique atento na semântica do HTML. 
+- Tente criar transições e efeitos de carregamento. 
+- Use animações quando onde e como achar melhor. 
+- Tente fazer com que seja possível abrir, por exemplo, a página de notícias do Brasil diretamente, sem passar pela página inicial. Assim como as outras páginas. -> OK |  O mesmo pode ser aplicado com a paginação. -> OK
+
+

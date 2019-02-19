@@ -6,6 +6,7 @@ import Card from '../Card/card';
 import ApiError from './ApiError/apiError';
 import LoadingApi from './LoadingApi/loadingApi'
 import LoadingImg from '../../assets/imgs/logoWebedia.png'
+import Pagination from '../Pagination/pagination'
 
 class ApiRequest extends Component {
     
@@ -17,15 +18,15 @@ class ApiRequest extends Component {
           country: params.get("country"),
           page: params.get("page"),
           textSearch: params.get("search"),
-          news: []
+          news: [],
+          totalNews:0
         };
         this.request = this.request.bind(this);
     }
 
-    async request(country,textSearch, page){
+    async request(country, textSearch, page, pageSize){
         let url = "https://newsapi.org/v2/";
-        let apiKey = "&apiKey=df80cb7555a64838b111e56a9e3afb27";
-        let pageSize = "&pageSize=7";
+        let apiKey = "&apiKey=98be7fab932f4f518d559904180f72b5";
         if (!this.state.loading){
             this.setState({
                 loading:true
@@ -47,7 +48,9 @@ class ApiRequest extends Component {
                 url += "top-headlines?country=" + country;
             }
         }
-        url += pageSize; 
+        if (pageSize!=null){
+            url += "&pagesize=" + pageSize; 
+        }
         if (page!=null){
             url += "&page=" + page;
         }
@@ -56,12 +59,16 @@ class ApiRequest extends Component {
         const json = await response.json();
         await this.setState({
             loading:false,
-            news: json.articles
+            status: json.status,
+            news: json.articles,
+            textSearch: textSearch,
+            totalNews: json.totalResults
         });
+        console.log(url);
     }
 
     componentDidMount() { //Inicializar request
-        this.request(this.state.country, this.state.textSearch, this.state.page);
+        this.request(this.state.country, this.state.textSearch, this.state.page, 7);
     }
     
     render() {
@@ -77,12 +84,20 @@ class ApiRequest extends Component {
                     />)
                     :
                     <div>
-                        {this.state.news === null || this.state.news.length === 0 ?
+                        {this.state.status ==='error' || (this.state.news === undefined || this.state.news === null || this.state.news.length === 0) ?
                             <ApiError/>
                         :
-                            <Card 
-                                news = {this.state.news}
-                            />
+                            <div>
+                                <Card 
+                                    news = {this.state.news}
+                                />
+                                <Pagination 
+                                    country = {this.state.country}
+                                    page = {this.state.page}
+                                    totalNews = {this.state.totalNews}
+                                    textSearch = {this.state.textSearch}
+                                />     
+                            </div>
                         }
                     </div>
                 }

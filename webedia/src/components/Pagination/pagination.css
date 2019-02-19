@@ -1,0 +1,27 @@
+
+.paginationDiv {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .paginationItem {
+    background: #fff;
+    border: none;
+    margin: 0 10px;
+    border-radius: 50%;
+    width: 60px;
+    box-shadow: 0 6px 4px -4px rgba(0,0,0,0.2);
+    height: 60px;
+    color:#acabac;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration: none;
+  }
+  .paginationItem.active{
+      background: #7ca3d2;
+      color:#fff;
+  }

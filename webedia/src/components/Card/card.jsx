@@ -15,7 +15,7 @@ class Card extends Component {
     render(){
         return(
             <section className="newsSection">
-                {this.props.news.map(({ author, description, publishedAt, title, url, urlToImage}, index) => (
+                {this.props.news.slice(0, 7).map(({ author, description, publishedAt, title, url, urlToImage}, index) => (
                     <a key={title} className={"newsCard" + (index>=2 && index<=4 ? ' cardMiddle': '')} href={url} target="_blank" rel="noopener noreferrer">
                         <div className="newsImageDiv">
                             {urlToImage != null ?
