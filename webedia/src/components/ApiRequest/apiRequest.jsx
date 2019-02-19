@@ -27,8 +27,10 @@ class ApiRequest extends Component {
         let apiKey = "&apiKey=df80cb7555a64838b111e56a9e3afb27";
         let pageSize = "&pageSize=7";
         if (!this.state.loading){
-            this.state.loading = true;
-        }
+            this.setState({
+                loading:true
+            }); 
+       }
         if (country === null && textSearch=== null){
             url += "top-headlines?country=br";
         }
