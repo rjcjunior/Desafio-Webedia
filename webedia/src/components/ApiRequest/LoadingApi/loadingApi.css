@@ -1,0 +1,47 @@
+
+.loading {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.3);
+    z-index: 3;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+/*---Animation---*/
+@keyframes spin {
+    from, to {
+      transform: rotateX(0) rotateY(0);
+    }
+    25% {
+      transform: rotateX(180deg) rotateY(0);
+    }
+    25.1% {
+      transform: rotateX(180deg) rotateY(0);
+    }
+    50% {
+      transform: rotateX(180deg) rotateY(180deg);
+    }
+    50.1% {
+      transform: rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+      transform: rotateX(360deg) rotateY(180deg);
+    }
+    75.1% {
+      transform: rotateX(360deg) rotateY(180deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+.loadingImg {
+    animation: spin 6s cubic-bezier(0, 0, .75, 1) infinite;
+    margin: auto 0; 
+}
+  
+  

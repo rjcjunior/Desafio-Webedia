@@ -16,7 +16,7 @@ class Card extends Component {
         return(
             <section className="newsSection">
                 {this.props.news.map(({ author, description, publishedAt, title, url, urlToImage}, index) => (
-                    <a className={"newsCard" + (index>=2 && index<=4 ? ' cardMiddle': '')} href={url} target="_blank" rel="noopener noreferrer">
+                    <a key={title} className={"newsCard" + (index>=2 && index<=4 ? ' cardMiddle': '')} href={url} target="_blank" rel="noopener noreferrer">
                         <div className="newsImageDiv">
                             {urlToImage != null ?
                                 <img className="newsImage" src={urlToImage} alt="Imagem da noticia">

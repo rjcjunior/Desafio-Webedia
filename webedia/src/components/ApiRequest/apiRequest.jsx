@@ -4,6 +4,8 @@ import Header from '../Header/header';
 import Footer from '../Footer/footer';
 import Card from '../Card/card';
 import ApiError from './ApiError/apiError';
+import LoadingApi from './LoadingApi/loadingApi'
+import LoadingImg from '../../assets/imgs/logoWebedia.png'
 
 class ApiRequest extends Component {
     
@@ -23,8 +25,10 @@ class ApiRequest extends Component {
     async request(country,textSearch, page){
         let url = "https://newsapi.org/v2/";
         let apiKey = "&apiKey=df80cb7555a64838b111e56a9e3afb27";
-        let pageSize = "&pageSize=7"
-
+        let pageSize = "&pageSize=7";
+        if (!this.state.loading){
+            this.state.loading = true;
+        }
         if (country === null && textSearch=== null){
             url += "top-headlines?country=br";
         }
@@ -49,10 +53,9 @@ class ApiRequest extends Component {
         const response = await fetch(url);
         const json = await response.json();
         await this.setState({
-            loading: false,
+            loading:false,
             news: json.articles
         });
-        console.log(this.state.news != null || this.state.news.length === 0);
     }
 
     componentDidMount() { //Inicializar request
@@ -65,13 +68,23 @@ class ApiRequest extends Component {
                 <Header
                     request = {this.request}
                 />
-                {this.state.news === null || this.state.news.length === 0 ?
-                    <ApiError/>
-                :
-                    <Card 
-                        news = {this.state.news}
-                    />
+                {this.state.loading ?(
+
+                    <LoadingApi
+                        attrLogo = {LoadingImg}
+                    />)
+                    :
+                    <div>
+                        {this.state.news === null || this.state.news.length === 0 ?
+                            <ApiError/>
+                        :
+                            <Card 
+                                news = {this.state.news}
+                            />
+                        }
+                    </div>
                 }
+
                 <Footer />
             </div>
         );

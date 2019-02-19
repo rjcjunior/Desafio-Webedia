@@ -1,6 +1,7 @@
 .newsSection {
     text-align: center;
     display: inline-block;
+    width: 100%;
 }
 .newsCard {
     width: 467px;
