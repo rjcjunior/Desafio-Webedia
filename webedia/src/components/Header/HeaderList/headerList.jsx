@@ -11,14 +11,21 @@ const  itensList = [
 
 class HeaderList extends Component {
 
+    OnCountryChange(e, country) {
+        if (country === '' ||country === null || country === undefined){
+            country = "br";
+        }
+        e.preventDefault();
+        this.props.OnParametersChange2(country);
+    }
+
     render(){
         return(
             <div className={"headerList " +  (this.props.mobileOpen ? 'responsiveMenu': '')} >
                 <ul>
-                    {itensList.map(({ country, text }) => (
-                        
+                    {itensList.map(({ country, text }) => (                        
                         <li  key={country} id={country!=='' ? "item-"+country : 'item-des'} className="headerItem">
-                            <a href={country!=='' ? window.location.origin+ "?country=" + country : '/'} data-hover={text}>{text}</a>
+                            <span data-hover={text} onClick={e => this.OnCountryChange(e, country)}>{text}</span>
                         </li>
                     ))}
                 </ul>

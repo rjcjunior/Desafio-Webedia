@@ -26,7 +26,7 @@ class ApiRequest extends Component {
 
     async request(country, textSearch, page, pageSize){
         let url = "https://newsapi.org/v2/";
-        let apiKey = "&apiKey=98be7fab932f4f518d559904180f72b5";
+        let apiKey = "&apiKey=219655f1a9e245a99a21594a0af15de8";
         if (!this.state.loading){
             this.setState({
                 loading:true
@@ -55,16 +55,18 @@ class ApiRequest extends Component {
             url += "&page=" + page;
         }
         url += apiKey;
+        console.log(url);
         const response = await fetch(url);
         const json = await response.json();
         await this.setState({
-            loading:false,
-            status: json.status,
-            news: json.articles,
-            textSearch: textSearch,
-            totalNews: json.totalResults
+                loading:false,
+                status: json.status,
+                country: country,
+                page: page,
+                news: json.articles,
+                textSearch: textSearch,
+                totalNews: json.totalResults
         });
-        console.log(url);
     }
 
     componentDidMount() { //Inicializar request
@@ -91,7 +93,8 @@ class ApiRequest extends Component {
                                 <Card 
                                     news = {this.state.news}
                                 />
-                                <Pagination 
+                                <Pagination
+                                    request = {this.request}
                                     country = {this.state.country}
                                     page = {this.state.page}
                                     totalNews = {this.state.totalNews}

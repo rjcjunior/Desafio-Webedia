@@ -22,6 +22,8 @@ class Header extends Component {
         this.clickSearchOpen = this.clickSearchOpen.bind(this);
         this.clickMenuClose = this.clickMenuClose.bind(this);
         this.OnParametersChange = this.OnParametersChange.bind(this);        
+        this.OnParametersChange2 = this.OnParametersChange2.bind(this);        
+
     }
     clickMenuOpen(e) {
         e.preventDefault();
@@ -43,6 +45,11 @@ class Header extends Component {
         let country = params.get("country");
         this.props.request(country, textSearch, null, 7);
     }
+
+    OnParametersChange2(country) {
+        this.props.request(country, null, null, 7);
+    }
+    
     render(){
         return(
             <header>
@@ -65,6 +72,7 @@ class Header extends Component {
                     OnParametersChange = {this.OnParametersChange}
                 />
                 <HeaderList 
+                    OnParametersChange2 = {this.OnParametersChange2}
                     mobileOpen = {this.state.mobileOpen}
                 />
                 <SearchIcon

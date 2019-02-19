@@ -12,8 +12,12 @@ class Pagination extends Component {
         if (this.props.search !== null && this.props.search !== undefined){
             url += "&search=" + this.props.search;
         }
+        let numberOfPages = Math.ceil(this.props.totalNews/7); 
+        if (numberOfPages>100){ //Conta gratuita só permite resultados até a pagina 100 
+            numberOfPages = 100;
+        }
         this.state = {
-            numberOfPages: Math.ceil(this.props.totalNews/7),
+            numberOfPages: numberOfPages,
             url: url
         };
         this.getPagination();
@@ -74,11 +78,19 @@ class Pagination extends Component {
         return pages;       
     }
 
+    OnPageChange(e, page) {
+        if (page === '' ||page === null || page === undefined){
+            page = 1;
+        }
+        e.preventDefault();
+        this.props.request(this.props.country, this.props.textSearch, page, 7);
+    }
+
     render(){
         return(
             <div className="paginationDiv">        
             {this.getPagination().map((item,i) => (
-                <a key={"pItem" + item} className={"paginationItem " +  (parseInt(this.props.page) === item || (this.props.page === null && (i+1) === 1) ? 'active': '')}  href = {this.state.url + "&page=" + item } >{item}</a>              
+                <span key={"pItem" + item} className={"paginationItem " +  (parseInt(this.props.page) === item || (this.props.page === null && (i+1) === 1) ? 'active': '')} onClick={e => this.OnPageChange(e, item)}  >{item}</span>              
             ))}
             </div>
         );
