@@ -12,7 +12,7 @@ class ApiRequest extends Component {
     
     constructor(props) {
         super(props);
-        let params = new URLSearchParams(document.location.search.substring(1));
+        let params = new URLSearchParams(document.location.search.substring(1)); //Pegar parametros na URL
         this.state = {
           loading: true,
           country: params.get("country"),
@@ -37,10 +37,10 @@ class ApiRequest extends Component {
         }
         else{
             if(textSearch!=null){ 
-                if (country != null) {
+                if (country != null) { //Verificar se é a principal 
                     url += "top-headlines?q=" + textSearch + "&country=" + country;
                 }    
-                else{
+                else{ //Pegar todas noticias
                     url += "everything?q=" + textSearch;
                 }
             }
@@ -89,7 +89,7 @@ class ApiRequest extends Component {
                     :
                     <div>
                         {this.state.status ==='error' || (this.state.news === undefined || this.state.news === null || this.state.news.length === 0) ?
-                            <ApiError/>
+                            <ApiError/> //Se der erro ou se não tiver noticias
                         :
                             <div>
                                 <Card 

@@ -51,6 +51,10 @@ As notícias deverão ser carregadas a partir de uma API.
 
 ### Reponsividade
 
+- SmartPhones -> OK
+- Desktops -> OK
+- Telas grandes
+
 ## Melhorias e sugestões
 
  Que tal fazer umas melhorias no projeto? Seja deixando mais bonito, mais funcional ou mais otimizado.

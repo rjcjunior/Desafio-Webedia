@@ -62,7 +62,7 @@
     transform: translateY(0px);
 }
 /* Desktop */
-@media (min-width: 768px){
+@media (min-width: 1026px){
     .headerList ul{
         -webkit-box-shadow: 0 6px 4px -4px rgba(0,0,0,0.45);
         -moz-box-shadow: 0 6px 4px -4px rgba(0,0,0,0.45);
@@ -72,8 +72,8 @@
 }
 
 
-/* Mobile */
-@media (max-width: 767px){
+/* Mobile e telas pequenas */
+@media (max-width: 1025px){
     .headerList {
         display: none;
         position: absolute;

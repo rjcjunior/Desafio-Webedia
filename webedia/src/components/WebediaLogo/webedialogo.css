@@ -1,6 +1,6 @@
 
 /* Mobile */
-@media (max-width: 767px){
+@media (max-width: 1025px){
     .linkLogo{
         width: 50%;
         display: inline-block;

@@ -11,7 +11,7 @@ const  itensList = [
 
 class HeaderList extends Component {
 
-    OnCountryChange(e, country) {
+    OnCountryChange(e, country) { //Chamar requisição pegando outro país
         if (country === '' ||country === null || country === undefined){
             country = "br";
         }

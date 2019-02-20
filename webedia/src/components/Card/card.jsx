@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import './card.css';
 
-function splitText(text, index){
-    if (index>=2 && index<=4){
+function splitText(text, index){ //Função para comprimir o texto, para não ficar muito grande
+    if (index>=2 && index<=4){ //Cards do meio
         return text.length > 50 ? text.substr(0, 50)+'...':text.substr(0, 50);
     }
-    else{
+    else{ //Cards maiores
         return text.length > 100 ? text.substr(0, 100)+'...':text.substr(0, 100);
     }
 }
 
 class Card extends Component {
 
-    render(){
+    render(){        
         return(
             <section className="newsSection">
                 {this.props.news.slice(0, 7).map(({ author, description, publishedAt, title, url, urlToImage}, index) => (

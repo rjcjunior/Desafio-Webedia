@@ -25,28 +25,28 @@ class Header extends Component {
         this.OnParametersChange2 = this.OnParametersChange2.bind(this);        
 
     }
-    clickMenuOpen(e) {
+    clickMenuOpen(e) { //Função Para abrir o menu
         e.preventDefault();
         this.state.mobileOpen ? this.setState({ mobileOpen: false, overlay:false }) : this.setState({ mobileOpen: true, overlay:true });
         this.render();
     }
-    clickSearchOpen(e) {
+    clickSearchOpen(e) { //Função Para Abrir a busca
         e.preventDefault();
         this.state.searchBar ? this.setState({ searchBar: false}) : this.setState({ searchBar: true });
         this.render();
     }
-    clickMenuClose(e) {
+    clickMenuClose(e) { //Função para fechar o menu ou a busca
         e.preventDefault();
         this.state.mobileOpen ? this.setState({ mobileOpen: false, overlay:false }) : this.setState({ searchBar: false });
         this.render();
     }
-    OnParametersChange(textSearch) {
+    OnParametersChange(textSearch) { //Requisitar busca
         let params = new URLSearchParams(document.location.search.substring(1));
         let country = params.get("country");
         this.props.request(country, textSearch, null, 7);
     }
 
-    OnParametersChange2(country) {
+    OnParametersChange2(country) { // Requisitar somente o Pais
         this.props.request(country, null, null, 7);
     }
     

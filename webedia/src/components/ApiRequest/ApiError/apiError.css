@@ -46,7 +46,7 @@
 }
 
 /* Mobile */
-@media (max-width: 767px){
+@media (max-width: 1025px){
     .errorDiv {
         display: block;
         padding: 38px 0;
