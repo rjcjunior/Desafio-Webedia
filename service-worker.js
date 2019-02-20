@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Desafio-Webedia/precache-manifest.7a74a8c94ebb1fd1f7843095e9044927.js"
+  "/Desafio-Webedia/precache-manifest.f248cc526361f4aeec78e5cd65042a79.js"
 );
 
 workbox.clientsClaim();

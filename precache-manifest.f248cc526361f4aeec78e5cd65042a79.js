@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/Desafio-Webedia/static/js/runtime~main.7aa00e84.js"
   },
   {
-    "revision": "101cbe5c04eccd486252",
-    "url": "/Desafio-Webedia/static/js/main.101cbe5c.chunk.js"
+    "revision": "a2cff13b7ae7c574737a",
+    "url": "/Desafio-Webedia/static/js/main.a2cff13b.chunk.js"
   },
   {
     "revision": "3161286f832d1ae1b6c2",
     "url": "/Desafio-Webedia/static/js/1.3161286f.chunk.js"
   },
   {
-    "revision": "101cbe5c04eccd486252",
+    "revision": "a2cff13b7ae7c574737a",
     "url": "/Desafio-Webedia/static/css/main.7010ee22.chunk.css"
   },
   {
-    "revision": "0070ff7691d0e4e14060cb0592febb47",
+    "revision": "ea4136e2af0b5d5f5471ba1b617196c7",
     "url": "/Desafio-Webedia/index.html"
   }
 ];
