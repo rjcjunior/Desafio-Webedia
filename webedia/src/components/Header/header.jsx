@@ -45,6 +45,7 @@ class Header extends Component {
     OnParametersChange(textSearch) { //Requisitar busca
         let params = new URLSearchParams(document.location.search.substring(1));
         let country = params.get("country");
+        this.clickMenuClose();        
         this.props.request(country, textSearch, null, 7);
     }
 
