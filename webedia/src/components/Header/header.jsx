@@ -36,7 +36,7 @@ class Header extends Component {
         this.render();
     }
     clickMenuClose(e) { //Função para fechar o menu ou a busca
-        if (e!=undefined){
+        if (e!==undefined){
             e.preventDefault();
         }
         this.state.mobileOpen ? this.setState({ mobileOpen: false, overlay:false }) : this.setState({ searchBar: false });

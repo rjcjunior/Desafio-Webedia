@@ -87,8 +87,8 @@ class ApiRequest extends Component {
                         attrLogo = {LoadingImg}
                     />)
                     :
-                    <div>
-                        {this.state.status ==='error' || (this.state.news === undefined || this.state.news === null || this.state.news.length === 0) ?
+                    (
+                        this.state.status ==='error' || (this.state.news === undefined || this.state.news === null || this.state.news.length === 0) ?
                             <ApiError/> //Se der erro ou se não tiver noticias
                         :
                             <div>
@@ -102,9 +102,8 @@ class ApiRequest extends Component {
                                     totalNews = {this.state.totalNews}
                                     textSearch = {this.state.textSearch}
                                 />     
-                            </div>
-                        }
-                    </div>
+                            </div>                        
+                    )
                 }
 
                 <Footer />

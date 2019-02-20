@@ -75,7 +75,10 @@
 /* Mobile e telas pequenas */
 @media (max-width: 1025px){
     .headerList {
-        display: none;
+        /*display: none;*/
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
         position: fixed;
         top: 0;
         z-index: 2;
@@ -85,7 +88,10 @@
         overflow-y: auto;
     }
     .headerList.responsiveMenu{
-        display: block;
+        /*display: block;*/
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
     }
     .headerList ul {
         padding: 0;
