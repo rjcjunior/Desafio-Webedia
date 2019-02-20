@@ -36,7 +36,9 @@ class Header extends Component {
         this.render();
     }
     clickMenuClose(e) { //Função para fechar o menu ou a busca
-        e.preventDefault();
+        if (e!=undefined){
+            e.preventDefault();
+        }
         this.state.mobileOpen ? this.setState({ mobileOpen: false, overlay:false }) : this.setState({ searchBar: false });
         this.render();
     }
@@ -47,6 +49,7 @@ class Header extends Component {
     }
 
     OnParametersChange2(country) { // Requisitar somente o Pais
+        this.clickMenuClose();        
         this.props.request(country, null, null, 7);
     }
     

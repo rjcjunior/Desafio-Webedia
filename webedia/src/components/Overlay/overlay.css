@@ -1,12 +1,15 @@
 .overlayFalse{
     display: none;
 }
-.overlayTrue{
-    display: block;
-    position: absolute;
-    background: rgba(0,0,0,0.7);
-    width: 100%;
-    height: 100%;
-    left:0;
-    top:0;
-}
+/* Mobile e telas pequenas */
+@media (max-width: 1025px){
+    .overlayTrue{
+        display: block;
+        position: fixed;
+        background: rgba(0,0,0,0.7);
+        width: 100%;
+        height: 100%;
+        left:0;
+        top:0;
+    }
+}    

@@ -76,7 +76,7 @@
 @media (max-width: 1025px){
     .headerList {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         z-index: 2;
         height: 100%;
